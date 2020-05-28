@@ -20,25 +20,58 @@
 
 
 
-// JSNACK 2
-// L’utente inserisce due parole in successione, con due
-// prompt. Il software stampa prima la parola più corta, poi la
-// parola più lunga.
+// // JSNACK 2
+// // L’utente inserisce due parole in successione, con due
+// // prompt. Il software stampa prima la parola più corta, poi la
+// // parola più lunga.
+//
+// // l'utente inserisci la prima parola
+// var primaParola = prompt('Inserisci la prima parola');
+//
+// // l'utente inserisci la seconda parola
+// var secondaParola = prompt('Inserisci la seconda parola');
+//
+// //viene stampata prima la parola più corta poi quella lunga
+// if (primaParola.length < secondaParola.length) {
+//   console.log('stampa', primaParola);
+//   console.log('stampa', secondaParola);
+// } else if (secondaParola.length < primaParola.length) {
+//   console.log('stampa', secondaParola);
+//   console.log('stampa', primaParola);
+// } else {
+//   primaParola.length = secondaParola.length;
+//   console.log('stampa', primaParola, 'e', secondaParola);
+// }
 
-// l'utente inserisci la prima parola
-var primaParola = prompt('Inserisci la prima parola');
+// JSNACK 3
+// Il software deve chiedere per 5 volte all’utente di inserire un
+// numero. Il programma stampa la somma di tutti i numeri
+// inseriti. Esegui questo programma in due versioni, con il for
+// e con il while.
 
-// l'utente inserisci la seconda parola
-var secondaParola = prompt('Inserisci la seconda parola');
+// dichiaro la somma dei numeri partendo da 0
+var somma = 0;
 
-//viene stampata prima la parola più corta poi quella lunga
-if (primaParola.length < secondaParola.length) {
-  console.log('stampa', primaParola);
-  console.log('stampa', secondaParola);
-} else if (secondaParola.length < primaParola.length) {
-  console.log('stampa', secondaParola);
-  console.log('stampa', primaParola);
-} else {
-  primaParola.length = secondaParola.length;
-  console.log('stampa', primaParola, 'e', secondaParola);
+// //versione con for
+// // l'utente inserisce 5 volte un numero
+// for (var i = 0; i < 5; i++) {
+//   var numero = parseInt(prompt('Inserisci un numero'));
+//   console.log(numero);
+//
+//     // viene stampata la somma dei numeri inseriti
+//     somma += numero;
+//     console.log(somma);
+// }
+
+//versione con while
+var i = 0;
+while (i < 5) {
+  var numero = parseInt(prompt('Inserisci un numero'));
+  console.log(numero);
+
+  // viene stampata la somma dei numeri inseriti
+  somma += numero;
+  console.log(somma);
+
+  i++;
 }
