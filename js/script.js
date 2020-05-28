@@ -43,35 +43,63 @@
 //   console.log('stampa', primaParola, 'e', secondaParola);
 // }
 
-// JSNACK 3
-// Il software deve chiedere per 5 volte all’utente di inserire un
-// numero. Il programma stampa la somma di tutti i numeri
-// inseriti. Esegui questo programma in due versioni, con il for
-// e con il while.
-
-// dichiaro la somma dei numeri partendo da 0
-var somma = 0;
-
-// //versione con for
-// // l'utente inserisce 5 volte un numero
-// for (var i = 0; i < 5; i++) {
+// // JSNACK 3
+// // Il software deve chiedere per 5 volte all’utente di inserire un
+// // numero. Il programma stampa la somma di tutti i numeri
+// // inseriti. Esegui questo programma in due versioni, con il for
+// // e con il while.
+//
+// // dichiaro la somma dei numeri partendo da 0
+// var somma = 0;
+//
+// // //versione con for
+// // // l'utente inserisce 5 volte un numero
+// // for (var i = 0; i < 5; i++) {
+// //   var numero = parseInt(prompt('Inserisci un numero'));
+// //   console.log(numero);
+// //
+// //     // viene stampata la somma dei numeri inseriti
+// //     somma += numero;
+// //     console.log(somma);
+// // }
+//
+// //versione con while
+// var i = 0;
+//
+// while (i < 5) {
 //   var numero = parseInt(prompt('Inserisci un numero'));
 //   console.log(numero);
 //
-//     // viene stampata la somma dei numeri inseriti
-//     somma += numero;
-//     console.log(somma);
+//   // viene stampata la somma dei numeri inseriti
+//   somma += numero;
+//   console.log(somma);
+//
+//   i++;
 // }
 
-//versione con while
-var i = 0;
-while (i < 5) {
-  var numero = parseInt(prompt('Inserisci un numero'));
-  console.log(numero);
+// JSNACK 4
+// In un array sono contenuti i nomi degli invitati alla festa del
+// grande Gatsby, chiedi all’utente il suo nome e comunicagli se
+// può partecipare o no alla festa.
 
-  // viene stampata la somma dei numeri inseriti
-  somma += numero;
-  console.log(somma);
+// lista dei nomi
+var listaNomi = ['mario', 'alessia', 'paolo', 'martina', 'ernesto', 'rossella'];
+console.log(listaNomi);
+
+var message = 'Non sei invitato';
+
+// chiedo all'utente il suo nome
+var nomeInvitato = prompt('Come ti chiami?');
+console.log(nomeInvitato);
+
+var i = 0;
+while (i < listaNomi.length) {
+
+  if (nomeInvitato === listaNomi[i]) {
+    console.log('Puoi partecipare alla festa');
+  }else {
+    console.log('Non sei invitato');
+  }
 
   i++;
 }
