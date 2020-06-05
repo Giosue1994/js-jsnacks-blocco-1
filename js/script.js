@@ -148,32 +148,62 @@
 //
 // console.log(invitati);
 
-// JSNAK 4
-// Crea due array che hanno un numero di elementi diversi.
-// Aggiungi elementi casuali all’array che ha meno elementi,
-// fino a quando ne avrà tanti quanti l’altro.
+// // JSNAK 4
+// // Crea due array che hanno un numero di elementi diversi.
+// // Aggiungi elementi casuali all’array che ha meno elementi,
+// // fino a quando ne avrà tanti quanti l’altro.
+//
+// // creo due arrai vuoti dove verranno inseriti dei numeri casuali
+// var listaNumeri1 = [];
+// var listaNumeri2 = [];
+//
+// // genero numeri casuali da aggiungere nella prima lista
+// for (var i = 0; i < 10; i++) {
+//   var numeroRandom1 = Math.floor((Math.random() * 50) + 1);
+//   listaNumeri1.push(numeroRandom1);
+// }
+//
+// // genero numeri casuali da aggiungere nella seconda lista
+// for (var i = 0; i < 20; i++) {
+//   var numeroRandom2 = Math.floor((Math.random() * 50) + 1);
+//   listaNumeri2.push(numeroRandom2);
+// }
+// console.log('lista numeri 1 prima', listaNumeri1);
+// console.log('lista numeri 2 prima', listaNumeri2);
+//
+// // controllo se la prima lista ha meno numeri della secondo e ne aggiungo finchè non raggiunge lo stesso numero della seconda
+// while (listaNumeri1.length < listaNumeri2.length) {
+//   listaNumeri1.push(Math.floor((Math.random() * 50) + 1));
+// }
+//
+// console.log('lista numeri 1 dopo', listaNumeri1);
 
-// creo due arrai vuoti dove verranno inseriti dei numeri casuali
-var listaNumeri1 = [];
-var listaNumeri2 = [];
 
-// genero numeri casuali da aggiungere nella prima lista
-for (var i = 0; i < 10; i++) {
-  var numeroRandom1 = Math.floor((Math.random() * 50) + 1);
-  listaNumeri1.push(numeroRandom1);
+// JSNACK BLOCCO 3
+// JSNACK 3
+// Crea due tag div con due id diversi: un div avrà il testo
+// colorato di rosso mentre l’altro di verde.
+// Partendo da un array di numeri, stampiamo nell’id
+// rosso i numeri dispari e in verde i numeri pari.
+
+// array della lista numerica
+var arrayNumeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// VARIABILI HTML
+var pari = document.getElementById('text-green');
+var dispari = document.getElementById('text-red');
+
+// creo un ciclo per verificare se i numeri della ista sono pari o dispari e gli assegno un colore
+for (var i = 0; i < arrayNumeri.length; i++) {
+
+  if (arrayNumeri[i] % 2 === 0) {
+    pari.innerHTML += arrayNumeri[i] + '<br>';
+    pari.style.color = 'green';
+  } else {
+    dispari.innerHTML += arrayNumeri[i] + '<br>';
+    dispari.style.color = 'red';
+  }
 }
 
-// genero numeri casuali da aggiungere nella seconda lista
-for (var i = 0; i < 20; i++) {
-  var numeroRandom2 = Math.floor((Math.random() * 50) + 1);
-  listaNumeri2.push(numeroRandom2);
-}
-console.log('lista numeri 1 prima', listaNumeri1);
-console.log('lista numeri 2 prima', listaNumeri2);
-
-// controllo se la prima lista ha meno numeri della secondo e ne aggiungo finchè non raggiunge lo stesso numero della seconda
-while (listaNumeri1.length < listaNumeri2.length) {
-  listaNumeri1.push(Math.floor((Math.random() * 50) + 1));
-}
-
-console.log('lista numeri 1 dopo', listaNumeri1);
+console.log(pari);
+console.log(dispari);
