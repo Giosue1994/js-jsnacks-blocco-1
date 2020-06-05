@@ -179,31 +179,50 @@
 // console.log('lista numeri 1 dopo', listaNumeri1);
 
 
-// JSNACK BLOCCO 3
-// JSNACK 3
-// Crea due tag div con due id diversi: un div avrà il testo
-// colorato di rosso mentre l’altro di verde.
-// Partendo da un array di numeri, stampiamo nell’id
-// rosso i numeri dispari e in verde i numeri pari.
+// // JSNACK BLOCCO 3
+// // JSNACK 2
+// // Fai inserire un numero, che chiameremo N, all’utente.
+// // Genera N array, ognuno formato da 10 numeri casuali
+// // tra 1 e 100.
+// // Ogni volta che ne crei uno, stampalo a schermo.
+//
+// // chiedo all'utente di inserire un numero
+// var numeroUtente = prompt('Inserisci un numero');
+//
+// // finche il numero inserito dall'utente è maggiore di 0 crea degli array con 10 numeri casuali
+// while (numeroUtente > 0) {
+//   var nArray = [];
+//   for (var i = 0; i < 10; i++) {
+//     nArray[i] = Math.floor((Math.random() * 100) + 1);
+//   }
+//   console.log(nArray);
+//   numeroUtente -= 1;
+// }
 
-// array della lista numerica
-var arrayNumeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// VARIABILI HTML
-var pari = document.getElementById('text-green');
-var dispari = document.getElementById('text-red');
-
-// creo un ciclo per verificare se i numeri della ista sono pari o dispari e gli assegno un colore
-for (var i = 0; i < arrayNumeri.length; i++) {
-
-  if (arrayNumeri[i] % 2 === 0) {
-    pari.innerHTML += arrayNumeri[i] + '<br>';
-    pari.style.color = 'green';
-  } else {
-    dispari.innerHTML += arrayNumeri[i] + '<br>';
-    dispari.style.color = 'red';
-  }
-}
-
-console.log(pari);
-console.log(dispari);
+// // JSNACK 3
+// // Crea due tag div con due id diversi: un div avrà il testo
+// // colorato di rosso mentre l’altro di verde.
+// // Partendo da un array di numeri, stampiamo nell’id
+// // rosso i numeri dispari e in verde i numeri pari.
+//
+// // array della lista numerica
+// var arrayNumeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//
+// // VARIABILI HTML
+// var pari = document.getElementById('text-green');
+// var dispari = document.getElementById('text-red');
+//
+// // creo un ciclo per verificare se i numeri della ista sono pari o dispari e gli assegno un colore
+// for (var i = 0; i < arrayNumeri.length; i++) {
+//
+//   if (arrayNumeri[i] % 2 === 0) {
+//     pari.innerHTML += arrayNumeri[i] + '<br>';
+//     pari.style.color = 'green';
+//   } else {
+//     dispari.innerHTML += arrayNumeri[i] + '<br>';
+//     dispari.style.color = 'red';
+//   }
+// }
+//
+// console.log(pari);
+// console.log(dispari);
