@@ -60,8 +60,8 @@
 // //
 // //     // viene stampata la somma dei numeri inseriti
 // //     somma += numero;
-// //     console.log(somma);
 // // }
+// //     console.log(somma);
 //
 // //versione con while
 // var i = 0;
@@ -77,29 +77,49 @@
 //   i++;
 // }
 
-// JSNACK 4
-// In un array sono contenuti i nomi degli invitati alla festa del
-// grande Gatsby, chiedi all’utente il suo nome e comunicagli se
-// può partecipare o no alla festa.
+// // JSNACK 4
+// // In un array sono contenuti i nomi degli invitati alla festa del
+// // grande Gatsby, chiedi all’utente il suo nome e comunicagli se
+// // può partecipare o no alla festa.
+//
+// // lista dei nomi
+// var listaNomi = ['mario', 'alessia', 'paolo', 'martina', 'ernesto', 'rossella'];
+// console.log(listaNomi);
+//
+// var invitato = false;
+//
+// // chiedo all'utente il suo nome
+// var nomeInvitato = prompt('Come ti chiami?');
+// console.log(nomeInvitato);
+//
+// // comunica all'utente se può partecipare o no alla festa
+// var i = 0;
+// while (i < listaNomi.length) {
+//
+//   if (nomeInvitato === listaNomi[i]) {
+//     invitato = true;
+//   }
+//
+//   i++;
+// }
+//
+// if (invitato === true) {
+//     console.log('Puoi entrare, sei invitato');
+// } else {
+//     console.log('Non sei invitato');
+// }
 
-// lista dei nomi
-var listaNomi = ['mario', 'alessia', 'paolo', 'martina', 'ernesto', 'rossella'];
-console.log(listaNomi);
+// JSNACK 5
+// Chiedi un numero di 4 cifre all’utente e calcola la somma
+// di tutte le cifre che compongono il numero.
 
-var message = 'Non sei invitato';
+// chiedo all'utente di inserire un numero di 4 cifre
+var numeroUtente = parseInt(prompt('Inserisci un numero di quattro cifre'));
+console.log(numeroUtente);
 
-// chiedo all'utente il suo nome
-var nomeInvitato = prompt('Come ti chiami?');
-console.log(nomeInvitato);
 
-var i = 0;
-while (i < listaNomi.length) {
+var arrayNumeroUtente = [];
+arrayNumeroUtente.push(numeroUtente);
+console.log(arrayNumeroUtente);
 
-  if (nomeInvitato === listaNomi[i]) {
-    console.log('Puoi partecipare alla festa');
-  }else {
-    console.log('Non sei invitato');
-  }
-
-  i++;
-}
+var arrayNumeroUtente = numeroUtente.split('');
