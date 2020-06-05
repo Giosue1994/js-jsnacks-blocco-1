@@ -1,3 +1,4 @@
+// // JSNACK BLOCCO 1
 // // JSNACK 1
 // // L’utente inserisce due numeri in successione, con due
 // // prompt. Il software stampa il maggiore.
@@ -109,17 +110,70 @@
 //     console.log('Non sei invitato');
 // }
 
-// JSNACK 5
-// Chiedi un numero di 4 cifre all’utente e calcola la somma
-// di tutte le cifre che compongono il numero.
+// // JSNACK 5
+// // Chiedi un numero di 4 cifre all’utente e calcola la somma
+// // di tutte le cifre che compongono il numero.
+//
+// // chiedo all'utente di inserire un numero di 4 cifre
+// var numeroUtente = parseInt(prompt('Inserisci un numero di quattro cifre'));
+// console.log(numeroUtente);
+//
+//
+// var arrayNumeroUtente = [];
+// arrayNumeroUtente.push(numeroUtente);
+// console.log(arrayNumeroUtente);
+//
+// var arrayNumeroUtente = numeroUtente.split('');
 
-// chiedo all'utente di inserire un numero di 4 cifre
-var numeroUtente = parseInt(prompt('Inserisci un numero di quattro cifre'));
-console.log(numeroUtente);
 
+// // JSNACK BLOCCO 2
+// // JSNACK 2
+// // Generatore di “nomi cognomi” casuali: prendendo una lista di nomi
+// // e una lista di cognomi, Gatsby vuole generare una falsa lista di invitati.
+//
+// // lista nomi
+// var nomi = ['Anna', 'Mario', 'Giuseppe', 'Andrea', 'Alice'];
+//
+// // lista cognnomi
+// var cognomi = ['Rossi', 'Bianchi', 'Verdi', 'Marroni', 'Celesti'];
+//
+// // lista degli invitati con nomi casuali
+// var invitati = [];
+//
+// // genera una falsa lista unendo i nomi e i cognomi in modo casuale
+// for (var i = 0; i < 5; i++) {
+//   var invitaticasuali = nomi[Math.floor((Math.random()*nomi.length))] + ' ' + cognomi[Math.floor((Math.random()*cognomi.length))];
+//   invitati.push(invitaticasuali);
+// }
+//
+// console.log(invitati);
 
-var arrayNumeroUtente = [];
-arrayNumeroUtente.push(numeroUtente);
-console.log(arrayNumeroUtente);
+// JSNAK 4
+// Crea due array che hanno un numero di elementi diversi.
+// Aggiungi elementi casuali all’array che ha meno elementi,
+// fino a quando ne avrà tanti quanti l’altro.
 
-var arrayNumeroUtente = numeroUtente.split('');
+// creo due arrai vuoti dove verranno inseriti dei numeri casuali
+var listaNumeri1 = [];
+var listaNumeri2 = [];
+
+// genero numeri casuali da aggiungere nella prima lista
+for (var i = 0; i < 10; i++) {
+  var numeroRandom1 = Math.floor((Math.random() * 50) + 1);
+  listaNumeri1.push(numeroRandom1);
+}
+
+// genero numeri casuali da aggiungere nella seconda lista
+for (var i = 0; i < 20; i++) {
+  var numeroRandom2 = Math.floor((Math.random() * 50) + 1);
+  listaNumeri2.push(numeroRandom2);
+}
+console.log('lista numeri 1 prima', listaNumeri1);
+console.log('lista numeri 2 prima', listaNumeri2);
+
+// controllo se la prima lista ha meno numeri della secondo e ne aggiungo finchè non raggiunge lo stesso numero della seconda
+while (listaNumeri1.length < listaNumeri2.length) {
+  listaNumeri1.push(Math.floor((Math.random() * 50) + 1));
+}
+
+console.log('lista numeri 1 dopo', listaNumeri1);
