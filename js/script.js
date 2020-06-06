@@ -110,20 +110,24 @@
 //     console.log('Non sei invitato');
 // }
 
-// // JSNACK 5
-// // Chiedi un numero di 4 cifre all’utente e calcola la somma
-// // di tutte le cifre che compongono il numero.
-//
-// // chiedo all'utente di inserire un numero di 4 cifre
-// var numeroUtente = parseInt(prompt('Inserisci un numero di quattro cifre'));
-// console.log(numeroUtente);
-//
-//
-// var arrayNumeroUtente = [];
-// arrayNumeroUtente.push(numeroUtente);
-// console.log(arrayNumeroUtente);
-//
-// var arrayNumeroUtente = numeroUtente.split('');
+// JSNACK 5
+// Chiedi un numero di 4 cifre all’utente e calcola la somma
+// di tutte le cifre che compongono il numero.
+
+// chiedo all'utente di inserire un numero di 4 cifre (il numero inizialmente è una 'stringa')
+var numeroUtente = prompt('Inserisci un numero di quattro cifre');
+console.log(numeroUtente);
+
+// converto il numero inserito dall'utente in un array
+var numeri = numeroUtente.split('');
+console.log(numeri);
+
+// eseguo la somma dei numeri divisi trasformandoli in 'numeri'
+var somma = 0;
+for (var i = 0; i < numeri.length; i++) {
+  somma += parseInt(numeri[i]);
+  console.log(somma);
+}
 
 
 // // JSNACK BLOCCO 2
